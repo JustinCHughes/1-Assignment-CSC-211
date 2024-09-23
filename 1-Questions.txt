@@ -10,6 +10,8 @@ The answer changed from the integer answer as it did not round down to 0 from th
 
 Q4)
 
+There were no complaints when removing return 0; or when removing void from the parenthesis. I will need to look through and determine the reasoning for why my compiler is not throwing an error.
+
 Q5)
 
 Q6)
