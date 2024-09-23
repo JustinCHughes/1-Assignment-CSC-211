@@ -6,6 +6,8 @@ Q2)
 
 Q3)
 
+The answer changed from the integer answer as it did not round down to 0 from the yards division. Outside of that, there was one more place of accuracy from the book example using float. This leads to the last two digits being "69" instead of "70".
+
 Q4)
 
 Q5)
