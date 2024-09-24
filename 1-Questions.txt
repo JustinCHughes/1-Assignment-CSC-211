@@ -1,9 +1,5 @@
 Chapter 1:
 
-Q1)
-
-Q2)
-
 Q3)
 
 The answer changed from the integer answer as it did not round down to 0 from the yards division. Outside of that, there was one more place of accuracy from the book example using float. This leads to the last two digits being "69" instead of "70".
@@ -14,21 +10,72 @@ There were no complaints when removing return 0; or when removing void from the 
 
 Q5)
 
+Error when dividing by y: "Floating point exception (core dumped)"
+Error when dividing by explicitly stated 0: Failed to compile and provided the compile error message stated below
+
+1-5HW.c: In function ‘main’:
+1-5HW.c:6:15: warning: division by zero [-Wdiv-by-zero]
+    6 |         x = 1 / 0;
+      |               ^
+
 Q6)
+
+The same errors occurred despite changing to %f if the 0 was hardcoded. In the event that it was divided by y and y was equal to 0, it instead outputted "x = inf".
 
 Q7)
 
+The output did not change despite moving the #include statement just in front of the main function.
+
 Q8)
 
-Q9)
+Without a .c at the end, the below compile error was generated.
+
+/usr/bin/ld:1-7HW: file format not recognized; treating as linker script
+/usr/bin/ld:1-7HW:1: syntax error
+collect2: error: ld returned 1 exit status
 
 Q10)
 
+Error when omitting Include:
+
+IncludeOMIT.c: In function ‘main’:
+IncludeOMIT.c:3:9: error: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+    3 |         printf("nonsense\n");
+      |         ^~~~~~
+IncludeOMIT.c:1:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+  +++ |+#include <stdio.h>
+    1 | int main()
+IncludeOMIT.c:3:9: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+    3 |         printf("nonsense\n");
+      |         ^~~~~~
+
+Error when omitting main:
+
+MainOMIT.c:3:1: error: expected identifier or ‘(’ before ‘{’ token
+    3 | {
+      | ^
+No error when omitting entire program. However, no return.
+
 Q18)
+
+The following error is produced when trying to calter a constant variable:
+
+1-18HW.c: In function ‘main’:
+1-18HW.c:7:11: error: assignment of read-only variable ‘a’
+    7 |         a = 333;
+      |           ^
 
 Q19)
 
+There seems to be 3 cases which can occur for this program.
+
+1 - I enter three different integers and it prints out that there were 3 successful integers.
+2 - I enter a float and the program will stop where it was and return however many ints were entered + the last float that was entered. So if I entered 1 then 1.2, it would return 2 successful conversions.
+3 - I enter a non-number. Here, it simply says the successful conversions was the amount I entered prior to the incorrect type. Therefore, if I enter 1 then "three", it would return 1 successful conversion.
+
 Q20)
+
+I added a print function into the program so that I could better understand what was going on. I can only enter two characters when entering individually because "enter" counts as a character in itself. If I enter a string, it grabs the first three letters of the string and counts it as the first three characters. I could not find a way to acheive a print statement of only 1 or 2 conversions. Potentially, this could be acheived by inputting a character which does not have a proper UTF coding, but I did not attempt.
 
 Q26)
 
