@@ -2,8 +2,8 @@
 
 int main(void)
 {
-	int x,y = 0;
-	x = 1 / 0;
-	printf("x = %d\n", x);
+	double x,y = 0;
+	x = 1 / y;
+	printf("x = %f\n", x);
 	return 0;
 }
