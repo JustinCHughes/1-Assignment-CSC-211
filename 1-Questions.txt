@@ -2,16 +2,20 @@ Chapter 1:
 
 Q3)
 
-The answer changed from the integer answer as it did not round down to 0 from the yards division. Outside of that, there was one more place of accuracy from the book example using float. This leads to the last two digits being "69" instead of "70".
+The answer changed from the integer answer as it did not round down to 0 from the yards division.
+Outside of that, there was one more place of accuracy from the book example using float. This leads
+to the last two digits being "69" instead of "70".
 
 Q4)
 
-There were no complaints when removing return 0; or when removing void from the parenthesis. I will need to look through and determine the reasoning for why my compiler is not throwing an error.
+There were no complaints when removing return 0; or when removing void from the parenthesis. I
+will need to look through and determine the reasoning for why my compiler is not throwing an error.
 
 Q5)
 
 Error when dividing by y: "Floating point exception (core dumped)"
-Error when dividing by explicitly stated 0: Failed to compile and provided the compile error message stated below
+Error when dividing by explicitly stated 0: Failed to compile and provided the compile error
+message stated below
 
 1-5HW.c: In function ‘main’:
 1-5HW.c:6:15: warning: division by zero [-Wdiv-by-zero]
@@ -20,7 +24,8 @@ Error when dividing by explicitly stated 0: Failed to compile and provided the c
 
 Q6)
 
-The same errors occurred despite changing to %f if the 0 was hardcoded. In the event that it was divided by y and y was equal to 0, it instead outputted "x = inf".
+The same errors occurred despite changing to %f if the 0 was hardcoded. In the event that it was
+divided by y and y was equal to 0, it instead outputted "x = inf".
 
 Q7)
 
@@ -70,12 +75,23 @@ Q19)
 There seems to be 3 cases which can occur for this program.
 
 1 - I enter three different integers and it prints out that there were 3 successful integers.
-2 - I enter a float and the program will stop where it was and return however many ints were entered + the last float that was entered. So if I entered 1 then 1.2, it would return 2 successful conversions.
-3 - I enter a non-number. Here, it simply says the successful conversions was the amount I entered prior to the incorrect type. Therefore, if I enter 1 then "three", it would return 1 successful conversion.
+
+2 - I enter a float and the program will stop where it was and return however many ints
+were entered + the last float that was entered. So if I entered 1 then 1.2, it would return
+2 successful conversions.
+
+3 - I enter a non-number. Here, it simply says the successful conversions was the amount I
+entered prior to the incorrect type. Therefore, if I enter 1 then "three", it would return
+1 successful conversion.
 
 Q20)
 
-I added a print function into the program so that I could better understand what was going on. I can only enter two characters when entering individually because "enter" counts as a character in itself. If I enter a string, it grabs the first three letters of the string and counts it as the first three characters. I could not find a way to acheive a print statement of only 1 or 2 conversions. Potentially, this could be acheived by inputting a character which does not have a proper UTF coding, but I did not attempt.
+I added a print function into the program so that I could better understand what was going
+on. I can only enter two characters when entering individually because "enter" counts as a
+character in itself. If I enter a string, it grabs the first three letters of the string
+and counts it as the first three characters. I could not find a way to acheive a print
+statement of only 1 or 2 conversions. Potentially, this could be acheived by inputting a
+character which does not have a proper UTF coding, but I did not attempt.
 
 Q26)
 
@@ -83,44 +99,214 @@ Chapter 2:
 
 Q1)
 
+"main" is NOT a keyword in C. While this is a function that will be seen in every C program
+as its entrypoint, it is not itself a keyword within C. 
+
 Q2)
+
+if else - if / else represent a simple control flow in C where a condition is checked.
+If the condition is true within the "if" statement, the if statement is run. Otherwise,
+"else" is run.
+
+while - while represents a looping control flow within C. "while" contains a conditional
+in it, and the logic within the while loop will repeat itself until the conditional becomes
+false.
+
+for - for is another type of loop. for intakes three inputs: an integer declaration, the
+conditions the integer must meet for the loop to continue, what happens to that integer
+each loop that occurs.
+
+char - A "char" keyword allows the programmer to declare the upcoming variable as type
+"char" and will thus only be able to intake values of type "char"
+
+switch case - switch case is another set of paired control flow keywords much like if / else.
+Switch will hold an expression which is normally a variable. There will then be a series of
+case statements where one will correspond to the expression in parenthesis. The first case
+statement that is equal to the expression within the switch statement will trigger. If there
+is no break after that case, the following case statement will execute. In the event that
+there is no case statement that is equal, a default action will execute.
 
 Q3)
 
+keywords - int, char
+identifiers - int age, float pi
+constants - const float pi 3.1415, const int celsiusboiling 100
+operators - +, -, *
+punctuators - (), {}
+strings - "abc", "test"
+
 Q4)
+
+3id. 00_go, 1_i_am are not identifiers. An identifier cannot start with an integer
+int is not an identifier. int is a reserved keyword and thus cannot be used a variable name.
+__yes is not an identifier. Identifiers cannot start with double underscore.
+star*it and one_i_aren"t are not identifiers. * and " cannot be used in variable names.
 
 Q5)
 
+// Programmer: Justin Hughes
+// Class: CSC 2133
+/* Project Purpose:
+This project is intended for the purpose of completing assignment 1 of my homework.
+It would show a bare bones understanding of the fundamentals of C*/
+
 Q6)
+
+Ways that the + symbol can be used:
+
+post-increment -- i++;
+pre-increment -- ++i;
+addition -- int a = b + c;
+increment by a certain amount -- int i += 2;
 
 Q7)
 
+The comment will terminate after the first */ which leaves the ending portion of the comment.
+This will throw an error.
+
 Q8)
+
+Using // works to comment out words.
 
 Q10)
 
+Wrote program and checked. Interestingly, the int that it was added into also did not factor
+in the increment during the addition process.
+
 Q11)
+
+Because it is a post-increment rather than a pre-increment, the while loop will output one
+more value of 2048.
 
 Q14)
 
+Output guess:
+2 1 1
+2 2 2
+5 3 3
+5 2 2
+
+Output guess was accurate.
+
 Q15)
+
+Doing the program with the parenthesis leads to x = 5, y = 2, z = 3
+- All variables are assigned approriately and then added because the parenthesis operatios
+are prioritized
+
+Removing the Z brackets leads to a compile error.
+- The addition operation occurs before the equals so it tries to add z. The equals sign is
+then left setting nothing to 3 causing a compile error.
+
+Removing the Y brackets leads to x = 5, y = 5, z = 3
+- z is first set to 3. This is then added to 2 which sets y to 5. Then x is set equal to y
+which is 5
+
+Removing all brackets leads to a compile error
+- Same reasoning as why removing the z brackets causes a compile error.
 
 Q16)
 
+Interesting tidbit. I do not know why, but these answers evaluate different when I am using
+them in print statements and compiled altogether in one program as opposed to when they are
+compiled and ran separately.
+
+int a = 2, b = -3, c = 5, d = -7, e = 11;
+
+1. a / b / c and (a / b) / c = 0
+It gets reduced to 0 as it is an integer that is less than 1.
+
+2. 7 + c * -- d / e = 4
+First, c * -- d which is 5 * -8 = -40
+Second, -40 / e or -40 / 11 = -3
+7 + -3 = 4
+
+3. 2 * a % -b + c + 1 = 1
+First, b becomes negative. -> 2 * 2 % (-(-3)) + 5 + 1
+Second -> 2 * 2 % (3) + 5 + 1
+Third -> 4 % 3 + 5 + 1
+Fourth -> 1 + 5 + 1
+Fifth -> 7
+
+4. 39 / - ++ e - + 29 % c
+39 / -12 - 4
+-3 - 4
+-7
+
+5. a += b += c += 1 + 2
+2 += -3 += 5 += 1 + 2
+2 += -3 += 5 += 3
+2 += -3 += 8
+2 += 5
+7
+
+6. 7 - + ++ a % (3 + b)
+This is a run time error. It is compiling yet giving a Floating point exception at runtime.
+
 Q17)
+
+int a = 1, b = 2, c = 3;
+
+a += (b += (c += 7));
+1 += (2 += (3 += 7));
+1 += (2 += 10);
+1 += 12;
+13
 
 Q18)
 
+Program made.
+
 Q19)
+
+Program made.
 
 Q21)
 
+Program made.
+
 Q22)
+
+Program made.
 
 Q26)
 
+Program made.
+
 Q28)
+
+Program made using \ in the string. It outputs a larger spacing in the middle of the string.
+Nothing happened using a string over 80 characters. I assume that the book is referencing something from
+when computers were less advanced.
 
 Q29)
 
+Program made. This works on my system.
+
 Q30)
+
+Program made. This throws a compile time error when it is #incl:
+
+2-30HW.c:1:2: error: invalid preprocessing directive #incl; did you mean #include?
+    1 | #incl <stdixx.h>
+      |  ^~~~
+      |  include
+2-30HW.c: In function ‘main’:
+2-30HW.c:5:9: error: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+    5 |         printf("Try me.\n");
+      |         ^~~~~~
+2-30HW.c:1:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+  +++ |+#include <stdio.h>
+    1 | #incl <stdixx.h>
+2-30HW.c:5:9: warning: incompatible implicit declaration of built-in function ‘printf’ [-Wbuiltin-declaration-mismatch]
+    5 |         printf("Try me.\n");
+      |         ^~~~~~
+
+When converting it to #include, it throws a different error of not understanding what <stdixx.h> is:
+
+2-30HW.c:1:10: fatal error: stdixx.h: No such file or directory
+    1 | #include <stdixx.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+
+
